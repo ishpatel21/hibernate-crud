@@ -12,9 +12,10 @@ Spring boot + Hibernate ORM CRUD
 * Then run application on port 8080
 * To test, go to http://localhost:8080/swagger-ui.html and perform CRUD operations
 
-### How do I get set up for my project? ###
+### How can I convert this project for my project? ###
 
 * Go to https://docs.jboss.org/hibernate/stable/orm/userguide/html_single/Hibernate_User_Guide.html#database-dialect and find dialect for your database
-* If your database is supported, add dependency for your database in pom.xml. 
+* If your database is supported there, add dependency for your database in pom.xml. 
 * Add database connection properties in application.properties
 * Add Hibernate entities in src/main/java/entities
+* Then run the application
