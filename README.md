@@ -1,29 +1,20 @@
 # README #
 
-This README would normally document whatever steps are necessary to get your application up and running.
+Spring boot + Hibernate ORM CRUD
 
 ### What is this repository for? ###
 
-* Quick summary
-* Version
-* [Learn Markdown](https://bitbucket.org/tutorials/markdowndemo)
+* Integrate any Hibernate ORM(5.4.22) supported database with a Spring Boot Application and perform different CRUD operations (Create, Read, Update, and Delete operations) with provided entities
 
-### How do I get set up? ###
+### How do I start in local? ###
 
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
+* Before running, make sure to run postgres database in local with Employee table(id:integer, name:text)
+* Then run application on port 8080
+* To test, go to http://localhost:8080/swagger-ui.html and perform CRUD operations
 
-### Contribution guidelines ###
+### How do I get set up for my project? ###
 
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Repo owner or admin
-* Other community or team contact
+* Go to https://docs.jboss.org/hibernate/stable/orm/userguide/html_single/Hibernate_User_Guide.html#database-dialect and find dialect for your database
+* If your database is supported, add dependency for your database in pom.xml. 
+* Add database connection properties in application.properties
+* Add Hibernate entities in src/main/java/entities
