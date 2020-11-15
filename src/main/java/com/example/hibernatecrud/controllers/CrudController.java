@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.hibernatecrud.entities.Employee;
 import com.example.hibernatecrud.services.CrudService;
 
 @RestController
@@ -15,8 +16,8 @@ public class CrudController {
 	private CrudService service; 
 	
 	@PostMapping("/saveorupdate")
-	public Object saveorupdate(@RequestBody Object obj, @RequestParam String entityName) {
-		return service.saveOrUpdate(entityName, obj);
+	public Object saveorupdate(@RequestBody Object json, @RequestParam String entityName) {
+		return service.saveOrUpdate(entityName, json);
 	}
 	
 	@PostMapping("/delete")
@@ -24,8 +25,8 @@ public class CrudController {
 		service.delete(entityName, id);
 	}
 	
-	@PostMapping("/read")
-	public Object read(@RequestParam String entityName, @RequestParam Long id) {
-		return service.read(entityName, id);
+	@PostMapping("/find")
+	public Object find(@RequestParam String entityName, @RequestParam Long id) {
+		return service.find(entityName, id);
 	}
 }
